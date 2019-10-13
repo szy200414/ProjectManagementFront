@@ -1,0 +1,14 @@
+<div class="scroll-container">
+    <mat-grid-list [cols]="cols" [rowHeight]="rowHeight">
+        <mat-grid-tile *ngFor="let item of items; let i = index">
+            <div [ngClass]="{'image-container': true }" (click)="onChange(i)">
+                <mat-icon class="avatar" [svgIcon]="item.avatar"></mat-icon>            
+                <div class="after">
+                    <div class="zoom">
+                        <mat-icon>checked</mat-icon>
+                    </div>
+                </div>
+            </div>          
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

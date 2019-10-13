@@ -1,0 +1,22 @@
+<form [formGroup]="loginForm">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>
+                Login
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-form-field class="full-width">
+                <input matInput type="text" formControlName="email" placeholder="User Name (Email)">
+            </mat-form-field>
+            <mat-form-field class="full-width">
+                <input matInput type="password" formControlName="password" placeholder="Password">
+            </mat-form-field>
+            <button mat-raised-button color="primary" type="submit" (click)="login()">Login</button>
+        </mat-card-content>
+        <mat-card-actions>
+            <p style="font-size: 2px; margin-left: 10px">Don't have a count?&nbsp;&nbsp;<a routerLink="/register">Register</a></p>
+            <p style="font-size: 2px; margin-left: 10px">Forget password?&nbsp;&nbsp;<a href="">Find back</a></p>
+        </mat-card-actions>
+    </mat-card>
+</form>

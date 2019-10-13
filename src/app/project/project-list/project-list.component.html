@@ -1,0 +1,10 @@
+<div class="container">
+    <app-project-item *ngFor="let project of projects" class="card"
+        [project]="project"
+        (click)="accessProject(project)">
+    </app-project-item>
+</div>
+<button class="fab-button" mat-fab type="button" (click)="openNewProjectDialog()">
+    <mat-icon>add</mat-icon>
+</button>
+

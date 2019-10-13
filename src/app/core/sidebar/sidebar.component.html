@@ -1,0 +1,14 @@
+<mat-nav-list>
+    <h3 mat-subheader>Project</h3>
+    <mat-list-item [routerLink]="['/project']" (click)="onNavClick()">
+        <mat-icon mat-list-icon svgIcon="projects"></mat-icon>
+        <span mat-line>All Projects</span>
+        <span mat-line mat-subheader>Check all projects</span>
+    </mat-list-item>
+    <h3 mat-subheader>Group</h3>
+    <mat-list-item (click)="onNavClick()">
+        <mat-icon mat-list-icon svgIcon="class"></mat-icon>
+        <span mat-line>My Group</span>
+        <span mat-line mat-subheader>Check all my groups</span>
+    </mat-list-item>
+</mat-nav-list>

@@ -1,0 +1,22 @@
+.progress-begin {
+    color: red;
+}
+
+.progress-medium {
+    color: orange;
+}
+
+.progress-finish {
+    color: green;
+}
+
+mat-card-content {
+    margin-bottom: 0;
+}
+
+.desc {
+    max-width: 260px;            
+    overflow: hidden;            
+    text-overflow: ellipsis;            
+    white-space: nowrap
+}
