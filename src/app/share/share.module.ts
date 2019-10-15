@@ -23,10 +23,11 @@ import {
 } from '@angular/material';
 import { ImageListSelectComponent } from './image-list-select/image-list-select.component';
 import { RouterModule } from '@angular/router';
+import { ValidationDialogComponent } from './validation-dialog/validation-dialog.component';
 
 
 @NgModule({
-  declarations: [ImageListSelectComponent],
+  declarations: [ImageListSelectComponent, ValidationDialogComponent],
   imports: [
     CommonModule,
     BrowserAnimationsModule,
@@ -53,6 +54,7 @@ import { RouterModule } from '@angular/router';
   ],
   exports: [
     CommonModule,
+    ValidationDialogComponent,
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,

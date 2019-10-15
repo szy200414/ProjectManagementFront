@@ -1,7 +1,9 @@
 <div class="container">
     <app-project-item *ngFor="let project of projects" class="card"
         [project]="project"
-        (click)="accessProject(project)">
+        (click)="accessProject(project)"
+        (editProject)="editProjectClick(project)"
+        (deleteProject)="deleteProjectClick(project)">
     </app-project-item>
 </div>
 <button class="fab-button" mat-fab type="button" (click)="openNewProjectDialog()">

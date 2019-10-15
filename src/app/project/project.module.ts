@@ -4,7 +4,7 @@ import { ProjectListComponent } from './project-list/project-list.component';
 import { ShareModule } from '../share/share.module';
 import { ProjectItemComponent } from './project-item/project-item.component';
 import { NewProjectComponent } from './new-project/new-project.component';
-
+import { ValidationDialogComponent } from '../share/validation-dialog/validation-dialog.component';
 
 
 @NgModule({
@@ -13,6 +13,9 @@ import { NewProjectComponent } from './new-project/new-project.component';
     ShareModule,
     ProjectRoutingModule,
   ],
-  entryComponents: [NewProjectComponent],
+  entryComponents: [
+    NewProjectComponent,
+    ValidationDialogComponent,
+  ],
 })
 export class ProjectModule { }

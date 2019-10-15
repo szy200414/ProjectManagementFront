@@ -13,15 +13,19 @@ export class NewProjectComponent implements OnInit {
   title: string;
   form: FormGroup;
   users: [];
+  project: Project;
 
   constructor(
     private fb: FormBuilder,
-    @Inject(MAT_DIALOG_DATA) private data) { }
+    @Inject(MAT_DIALOG_DATA) private data,
+    private dialogRef: MatDialogRef<NewProjectComponent>) { }
 
   ngOnInit() {
     this.title = this.data.title;
     this.users = this.data.users;
-    this.resetForm();
+    this.project = this.data.project;
+    this.resetForm(this.project);
+    //console.log(this.project);
   }
 
   resetForm(project: Project = null) {
@@ -38,6 +42,7 @@ export class NewProjectComponent implements OnInit {
       })
     } else {
       this.form = this.fb.group({
+        id:[project.Id],
         name:[project.Name],
         desc: [project.Desc],
         ownerId: [project.OwnerId],
@@ -48,6 +53,10 @@ export class NewProjectComponent implements OnInit {
         scoreTot: [project.ScoreTot],
       })
     }
+  }
+
+  onSubmit(event) {
+    this.dialogRef.close(this.form);
   }
 
 }

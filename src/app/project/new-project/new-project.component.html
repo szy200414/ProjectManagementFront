@@ -2,7 +2,7 @@
     <h2 mat-dialog-title>{{title}}</h2>
     <div mat-dialog-container>
         <mat-form-field>
-            <input matInput type="text" placeholder="Project Name">
+            <input matInput type="text" placeholder="Project Name" formControlName="name">
         </mat-form-field>
         <mat-form-field>
             <mat-select placeholder="Select Owner" formControlName="ownerId">
@@ -11,23 +11,22 @@
         </mat-form-field>
         <div class="date-picker">
             <mat-form-field class="begin-date">
-                <input matInput [matDatepicker]="beginDatepicker" type="text" placeholder="Begin Date">
+                <input matInput [matDatepicker]="beginDatepicker" type="text" placeholder="Begin Date" formControlName="beginDate">
                 <mat-datepicker-toggle matSuffix [for] = "beginDatepicker"></mat-datepicker-toggle>
             </mat-form-field>
             <mat-datepicker #beginDatepicker></mat-datepicker>
             <mat-form-field class="end-date">
-                <input matInput [matDatepicker]="endDatepicker" type="text" placeholder="End Date">
+                <input matInput [matDatepicker]="endDatepicker" type="text" placeholder="End Date" formControlName="endDate">
                 <mat-datepicker-toggle matSuffix [for] = "endDatepicker"></mat-datepicker-toggle>
             </mat-form-field>
             <mat-datepicker #endDatepicker></mat-datepicker>
         </div>
-        
 
         <mat-form-field appearance="outline">
             <mat-label>Desciption</mat-label>
-            <textarea matInput></textarea>
+            <textarea matInput formControlName="desc"></textarea>
         </mat-form-field>
-        <button type="submit" mat-raised-button color="primary">Create</button>
+        <button type="button" mat-raised-button color="primary" (click)="onSubmit()">Valid</button>
         <button type="button" mat-button mat-dialog-close>Cancle</button>
     </div>
 </form>

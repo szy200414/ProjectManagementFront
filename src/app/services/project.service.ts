@@ -19,7 +19,7 @@ export class ProjectService {
     return this.http.get<Project[]>(url, {headers: this.headers});
   }
 
-  createProject (name:string, desc: string, beginDate: Date, endDate: Date,
+  createProject(name:string, desc: string, beginDate: Date, endDate: Date,
     coverImage:string, ownerId: string): Observable<Project[]> {
       const url = `${this.config.url}/${this.domain}/createProject`;
       const params = {
@@ -31,5 +31,31 @@ export class ProjectService {
         OwnerId: ownerId,
       }
       return this.http.post<Project[]>(url, params, {headers: this.headers});
+  }
+
+  editProject(id: string, name:string, desc: string, beginDate: Date, endDate: Date,
+    coverImage:string, ownerId: string, state: number, scoreTot: number): Observable<Project[]> {
+    const url = `${this.config.url}/${this.domain}/editProject`;
+    const params = {
+      Id: id,
+      Name: name,
+      Desc: desc,
+      BeginDate: beginDate,
+      EndDate: endDate,
+      CoverImage: coverImage,
+      OwnerId: ownerId,
+      State: state,
+      ScoreTot: scoreTot,
+    }
+    return this.http.post<Project[]>(url, params, {headers: this.headers});
+  }
+
+  removeProject(id: string): Observable<Project[]> {
+    const url = `${this.config.url}/${this.domain}/removeProject`;
+    const params = {
+      Id: id,
+    }
+    console.log(id);
+    return this.http.post<Project[]>(url, params, {headers: this.headers});
   }
 }

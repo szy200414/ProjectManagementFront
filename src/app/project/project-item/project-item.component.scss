@@ -17,6 +17,10 @@ mat-card-content {
 .desc {
     max-width: 260px;            
     overflow: hidden;            
-    text-overflow: ellipsis;            
+    text-overflow: ellipsis;     
     white-space: nowrap
+}
+
+.cover {
+    width: 292px;
 }
