@@ -16,6 +16,10 @@ import {
   MatRadioModule,
   MatStepperModule,
   MatGridListModule,
+  MatSelectModule,
+  MatDialogModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
 } from '@angular/material';
 import { ImageListSelectComponent } from './image-list-select/image-list-select.component';
 import { RouterModule } from '@angular/router';
@@ -42,6 +46,10 @@ import { RouterModule } from '@angular/router';
     MatRadioModule,
     MatStepperModule,
     MatGridListModule,
+    MatSelectModule,
+    MatDialogModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
   ],
   exports: [
     CommonModule,
@@ -63,6 +71,10 @@ import { RouterModule } from '@angular/router';
     MatStepperModule,
     ImageListSelectComponent,
     MatGridListModule,
+    MatSelectModule,
+    MatDialogModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
   ]
 })
 export class ShareModule { }

@@ -13,5 +13,6 @@ import { NewProjectComponent } from './new-project/new-project.component';
     ShareModule,
     ProjectRoutingModule,
   ],
+  entryComponents: [NewProjectComponent],
 })
 export class ProjectModule { }

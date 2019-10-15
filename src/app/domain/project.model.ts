@@ -4,7 +4,7 @@ export interface Project {
     Desc: string;
     BeginDate: Date;
     EndDate: Date;
-    CoverImg: string;
+    CoverImage: string;
     OwnerId: string;
     OwnerFirstName: string;
     OwnerLastName: string;

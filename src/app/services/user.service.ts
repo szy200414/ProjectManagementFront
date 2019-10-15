@@ -1,5 +1,7 @@
 import { Injectable, Inject } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import { User } from '../domain/user.model';
+import { Observable } from 'rxjs';
 
 @Injectable()
 export class UserService {
@@ -32,5 +34,10 @@ export class UserService {
       Password: password,
     }
     return this.http.post(url, params, {headers: this.headers});
+  }
+
+  getAllUsers(): Observable<User[]> {
+    const url = `${this.config.url}/${this.domain}/getAllUsers`;
+    return this.http.get<User[]>(url, {headers: this.headers});
   }
 }
