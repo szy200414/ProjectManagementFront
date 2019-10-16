@@ -7,11 +7,12 @@ import { ShareModule } from './share/share.module';
 import { CoreModule } from './core/core.module';
 import { LoginModule } from './login/login.module';
 import { ProjectModule } from './project/project.module';
+import { MissionModule } from './mission/mission.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -20,6 +21,7 @@ import { ProjectModule } from './project/project.module';
     CoreModule,
     LoginModule,
     ProjectModule,
+    MissionModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

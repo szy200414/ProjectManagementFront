@@ -4,6 +4,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { NewProjectComponent } from '../new-project/new-project.component';
 import { UserService } from 'src/app/services/user.service';
 import { ValidationDialogComponent } from 'src/app/share/validation-dialog/validation-dialog.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-project-list',
@@ -18,7 +19,8 @@ export class ProjectListComponent implements OnInit {
   constructor(
     private projSvc: ProjectService,
     private userSvc: UserService,
-    private dialog: MatDialog) { }
+    private dialog: MatDialog,
+    private router: Router) { }
 
   ngOnInit() {
     this.projSvc.getAllProject().subscribe(result=>{
@@ -31,10 +33,6 @@ export class ProjectListComponent implements OnInit {
         this.users = m['Data'];
       }
     });
-  }
-
-  accessProject(project) {
-    console.log(project);
   }
 
   openNewProjectDialog() {
@@ -84,5 +82,10 @@ export class ProjectListComponent implements OnInit {
         });
       }
     });
+  }
+
+  accessMissionList(project) {
+    //console.log(project.Id);
+    this.router.navigate(['/project', project.Id]);
   }
 }
