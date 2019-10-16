@@ -1,5 +1,5 @@
 import { Injectable, Inject } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Project } from '../domain/project.model';
 import { Observable } from 'rxjs';
 
@@ -57,5 +57,13 @@ export class ProjectService {
     }
     console.log(id);
     return this.http.post<Project[]>(url, params, {headers: this.headers});
+  }
+
+  getMissionListByProjectId(id: string) {
+    const url = `${this.config.url}/${this.domain}/getMissionListByProjectId`;
+    const params = {
+      id: id,
+    }
+    return this.http.get(url, {params, headers: this.headers});
   }
 }
