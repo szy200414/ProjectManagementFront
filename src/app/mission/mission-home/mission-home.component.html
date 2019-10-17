@@ -1,2 +1,15 @@
 <button (click)="onClick()">Click</button>
 
+<div>
+    <mat-list *ngFor="let missionList of missionLists">
+        <app-mission-header 
+            [header]="missionList.ListName"
+            (newMission)="createMission()"
+            (editList)="editMissionList()"
+            (moveAll)="moveAllMissions()"
+            (deleteList)="removeList()">
+        </app-mission-header>
+        <app-mission-item *ngFor="let mission of missionList.Missions">           
+        </app-mission-item>
+    </mat-list>
+</div>

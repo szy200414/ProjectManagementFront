@@ -20,6 +20,7 @@ import {
   MatDialogModule,
   MatDatepickerModule,
   MatNativeDateModule,
+  MatMenuModule,
 } from '@angular/material';
 import { ImageListSelectComponent } from './image-list-select/image-list-select.component';
 import { RouterModule } from '@angular/router';
@@ -51,6 +52,8 @@ import { ValidationDialogComponent } from './validation-dialog/validation-dialog
     MatDialogModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatListModule,
+    MatMenuModule,
   ],
   exports: [
     CommonModule,
@@ -77,6 +80,8 @@ import { ValidationDialogComponent } from './validation-dialog/validation-dialog
     MatDialogModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatListModule,
+    MatMenuModule,
   ]
 })
 export class ShareModule { }

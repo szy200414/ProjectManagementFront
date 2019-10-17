@@ -12,7 +12,7 @@ import { MissionList } from 'src/app/domain/mission-list.model';
 export class MissionHomeComponent implements OnInit {
 
   projectId: string;
-  missionList: MissionList;
+  missionLists: MissionList[];
 
   constructor(private activateRoute: ActivatedRoute, private projSvc: ProjectService) {
     activateRoute.params.subscribe(params=>{
@@ -24,12 +24,12 @@ export class MissionHomeComponent implements OnInit {
     this.projSvc.getMissionListByProjectId(this.projectId)
       .subscribe(m=>{
         if (m['Code']===200) {
-          this.missionList = m['Data'];
+          this.missionLists = m['Data'];
         }
       })
   }
 
   onClick() {
-    console.log(this.missionList);
+    console.log(this.missionLists);
   }
 }
