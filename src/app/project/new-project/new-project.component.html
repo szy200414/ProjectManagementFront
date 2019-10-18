@@ -4,6 +4,9 @@
         <mat-form-field>
             <input matInput type="text" placeholder="Project Name" formControlName="name">
         </mat-form-field>
+        <app-user-research 
+            [users]="users"
+            label="Owner"></app-user-research>
         <mat-form-field>
             <mat-select placeholder="Select Owner" formControlName="ownerId">
                 <mat-option *ngFor="let user of users" [value]="user.Id">{{user.FirstName}}&nbsp;{{user.LastName}}</mat-option>

@@ -21,14 +21,16 @@ import {
   MatDatepickerModule,
   MatNativeDateModule,
   MatMenuModule,
+  MatAutocompleteModule,
 } from '@angular/material';
 import { ImageListSelectComponent } from './image-list-select/image-list-select.component';
 import { RouterModule } from '@angular/router';
 import { ValidationDialogComponent } from './validation-dialog/validation-dialog.component';
+import { UserResearchComponent } from './user-research/user-research.component';
 
 
 @NgModule({
-  declarations: [ImageListSelectComponent, ValidationDialogComponent],
+  declarations: [ImageListSelectComponent, ValidationDialogComponent, UserResearchComponent],
   imports: [
     CommonModule,
     BrowserAnimationsModule,
@@ -54,12 +56,14 @@ import { ValidationDialogComponent } from './validation-dialog/validation-dialog
     MatNativeDateModule,
     MatListModule,
     MatMenuModule,
+    MatAutocompleteModule,
   ],
   exports: [
     CommonModule,
     ValidationDialogComponent,
     BrowserAnimationsModule,
     FormsModule,
+    UserResearchComponent,
     ReactiveFormsModule,
     HttpClientModule,
     RouterModule,
@@ -82,6 +86,7 @@ import { ValidationDialogComponent } from './validation-dialog/validation-dialog
     MatNativeDateModule,
     MatListModule,
     MatMenuModule,
+    MatAutocompleteModule,
   ]
 })
 export class ShareModule { }

@@ -1,0 +1,12 @@
+<form>
+    <mat-form-field>
+        <input matInput [placeholder]="label" [matAutocomplete]="autoUsers" [formControl]="userResearch">
+        <mat-autocomplete #autoUsers="matAutocomplete" [displayWith]="displayUser">
+            <mat-option *ngFor="let user of users$ | async" [value]="user">{{user.FirstName}} {{user.LastName}}</mat-option>
+        </mat-autocomplete>
+    </mat-form-field>
+</form>
+
+
+
+
