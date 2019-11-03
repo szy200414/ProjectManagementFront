@@ -55,7 +55,6 @@ export class ProjectService {
     const params = {
       Id: id,
     }
-    console.log(id);
     return this.http.post<Project[]>(url, params, {headers: this.headers});
   }
 

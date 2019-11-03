@@ -6,12 +6,13 @@
         </mat-form-field>
         <app-user-research 
             [users]="users"
-            label="Owner"></app-user-research>
-        <mat-form-field>
+            label="Owner" 
+            formControlName="ownerId"></app-user-research>
+        <!--<mat-form-field>
             <mat-select placeholder="Select Owner" formControlName="ownerId">
                 <mat-option *ngFor="let user of users" [value]="user.Id">{{user.FirstName}}&nbsp;{{user.LastName}}</mat-option>
             </mat-select>
-        </mat-form-field>
+        </mat-form-field>-->
         <div class="date-picker">
             <mat-form-field class="begin-date">
                 <input matInput [matDatepicker]="beginDatepicker" type="text" placeholder="Begin Date" formControlName="beginDate">

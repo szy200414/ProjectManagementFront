@@ -42,12 +42,14 @@ export class ProjectListComponent implements OnInit {
     }});
     
     dialogRef.afterClosed().subscribe(result => {
-      this.projSvc.createProject(result.value.name, result.value.desc,
-        result.value.beginDate, result.value.endDate, result.value.coverImage='assets/img/covers/3.jpg', result.value.ownerId).subscribe(m=>{
-          if (m['Code']===200) {
-            this.projects = m['Data'];
-          }
-        });
+      if (result !== undefined) {
+        this.projSvc.createProject(result.value.name, result.value.desc,
+          result.value.beginDate, result.value.endDate, result.value.coverImage='assets/img/covers/3.jpg', result.value.ownerId).subscribe(m=>{
+            if (m['Code']===200) {
+              this.projects = m['Data'];
+            }
+          });
+      }      
     });
   }
 

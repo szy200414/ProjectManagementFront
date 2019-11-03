@@ -55,8 +55,9 @@ export class NewProjectComponent implements OnInit {
     }
   }
 
-  onSubmit(event) {
+  onSubmit() {
     this.dialogRef.close(this.form);
+    //console.log(this.form);
   }
 
 }
