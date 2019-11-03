@@ -29,7 +29,4 @@ export class MissionHomeComponent implements OnInit {
       })
   }
 
-  onClick() {
-    console.log(this.missionLists);
-  }
 }

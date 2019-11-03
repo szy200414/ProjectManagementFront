@@ -1,21 +1,19 @@
 <div mat-subheader class="header-container">
-    <div>
+    <div class="header">
         <h3>{{header}}</h3>
     </div>
-    <div class="fill">
-        <button mat-button type="button" (click)="onNewMissionClick()">
-            <mat-icon>add_circle_outline</mat-icon>
-            <span>New</span>
-        </button>
-    </div>
     <div>
-        <button mat-icon-button [matMenuTriggerFor]="menu">
+        <button mat-icon-button [matMenuTriggerFor]="menu" class="arrow_down">
             <mat-icon>keyboard_arrow_down</mat-icon>
         </button>
     </div>
 </div>
 
 <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="onNewMissionClick()">
+        <mat-icon>add_circle_outline</mat-icon>
+        <span>New Mission</span>
+    </button>
     <button mat-menu-item (click)="onEditMissionClick()">
         <mat-icon>mode_edit</mat-icon>
         <span>Edit List</span>

@@ -5,4 +5,5 @@ export interface Mission {
     Desc: string,
     Priority: number,
     Score: number,
+    DueDate: Date,
 }

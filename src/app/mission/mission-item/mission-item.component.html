@@ -1,1 +1,16 @@
-<p>mission-item works!</p>
+<mat-list-item class="container"
+    [ngClass]="{
+        'priority-normal': mission.Priority===3,
+        'priority-important': mission.Priority===2,
+        'priority-emergency': mission.Priority===1
+    }"
+    (click)="onClick()">
+    <div mat-line>
+        <span [matTooltip]="mission.Desc">{{mission.MissionName}}</span>
+    </div>
+    <div mat-line class="bottom-bar">
+        <span class="due-date" *ngIf="mission.DueDate">
+            Finish Date: {{ mission.DueDate | date: "yyyy-MM-dd" }}
+        </span>
+    </div>
+</mat-list-item>

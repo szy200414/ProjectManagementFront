@@ -22,6 +22,8 @@ import {
   MatNativeDateModule,
   MatMenuModule,
   MatAutocompleteModule,
+  MatDividerModule,
+  MatTooltipModule,
 } from '@angular/material';
 import { ImageListSelectComponent } from './image-list-select/image-list-select.component';
 import { RouterModule } from '@angular/router';
@@ -57,6 +59,8 @@ import { UserResearchComponent } from './user-research/user-research.component';
     MatListModule,
     MatMenuModule,
     MatAutocompleteModule,
+    MatDividerModule,
+    MatTooltipModule,
   ],
   exports: [
     CommonModule,
@@ -87,6 +91,8 @@ import { UserResearchComponent } from './user-research/user-research.component';
     MatListModule,
     MatMenuModule,
     MatAutocompleteModule,
+    MatDividerModule,
+    MatTooltipModule,
   ]
 })
 export class ShareModule { }

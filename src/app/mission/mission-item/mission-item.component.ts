@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-mission-item',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MissionItemComponent implements OnInit {
 
+  @Input() mission;
+  reminder: number;
+
   constructor() { }
 
   ngOnInit() {
+    this.reminder = 0;
   }
 
+  onClick() {
+    console.log(this.mission);
+  }
 }
